@@ -118,7 +118,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="PackSizeLabel" min="-2" pref="144" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="packSizeText" min="-2" pref="208" max="-2" attributes="0"/>
+                                          <Component id="itemPackSizeText" min="-2" pref="208" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="ItemCodeLabel" min="-2" pref="144" max="-2" attributes="0"/>
@@ -137,8 +137,8 @@
                                           </Group>
                                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="unitPriceText" max="32767" attributes="0"/>
-                                              <Component id="qtyOnHandText" max="32767" attributes="0"/>
+                                              <Component id="itemUnitPriceText" max="32767" attributes="0"/>
+                                              <Component id="itemQtyOnHandText" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -166,7 +166,7 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="packSizeText" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="itemPackSizeText" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="PackSizeLabel" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -177,12 +177,12 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="UnitPriceLabel" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="unitPriceText" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="itemUnitPriceText" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="QtyOnHandLabel" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="qtyOnHandText" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="itemQtyOnHandText" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                           <Component id="DeleteItemButton" min="-2" pref="33" max="-2" attributes="0"/>
@@ -250,9 +250,9 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemCodeTextActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="packSizeText">
+                <Component class="javax.swing.JTextField" name="itemPackSizeText">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="packSizeTextActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemPackSizeTextActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="itemDescText">
@@ -260,14 +260,14 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemDescTextActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="unitPriceText">
+                <Component class="javax.swing.JTextField" name="itemUnitPriceText">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="unitPriceTextActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemUnitPriceTextActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="qtyOnHandText">
+                <Component class="javax.swing.JTextField" name="itemQtyOnHandText">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="qtyOnHandTextActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemQtyOnHandTextActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>

@@ -4,16 +4,25 @@
  */
 package edu.ijse.layered.view;
 
+import edu.ijse.layered.controller.ItemController;
+import edu.ijse.layered.dto.ItemDTO;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Thisura
  */
 public class ItemView extends javax.swing.JFrame {
+    
+    private ItemController itemController;
 
     /**
      * Creates new form ItemView
      */
     public ItemView() {
+        itemController = new ItemController();
         initComponents();
     }
 
@@ -39,10 +48,10 @@ public class ItemView extends javax.swing.JFrame {
         DeleteItemButton = new javax.swing.JButton();
         QtyOnHandLabel = new javax.swing.JLabel();
         itemCodeText = new javax.swing.JTextField();
-        packSizeText = new javax.swing.JTextField();
+        itemPackSizeText = new javax.swing.JTextField();
         itemDescText = new javax.swing.JTextField();
-        unitPriceText = new javax.swing.JTextField();
-        qtyOnHandText = new javax.swing.JTextField();
+        itemUnitPriceText = new javax.swing.JTextField();
+        itemQtyOnHandText = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         ItemTable = new javax.swing.JTable();
         jSeparator1 = new javax.swing.JSeparator();
@@ -91,9 +100,9 @@ public class ItemView extends javax.swing.JFrame {
             }
         });
 
-        packSizeText.addActionListener(new java.awt.event.ActionListener() {
+        itemPackSizeText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                packSizeTextActionPerformed(evt);
+                itemPackSizeTextActionPerformed(evt);
             }
         });
 
@@ -103,15 +112,15 @@ public class ItemView extends javax.swing.JFrame {
             }
         });
 
-        unitPriceText.addActionListener(new java.awt.event.ActionListener() {
+        itemUnitPriceText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unitPriceTextActionPerformed(evt);
+                itemUnitPriceTextActionPerformed(evt);
             }
         });
 
-        qtyOnHandText.addActionListener(new java.awt.event.ActionListener() {
+        itemQtyOnHandText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                qtyOnHandTextActionPerformed(evt);
+                itemQtyOnHandTextActionPerformed(evt);
             }
         });
 
@@ -127,7 +136,7 @@ public class ItemView extends javax.swing.JFrame {
                             .addGroup(CustDetailsPanelLayout.createSequentialGroup()
                                 .addComponent(PackSizeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(packSizeText, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(itemPackSizeText, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(CustDetailsPanelLayout.createSequentialGroup()
                                 .addComponent(ItemCodeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -142,8 +151,8 @@ public class ItemView extends javax.swing.JFrame {
                                     .addComponent(QtyOnHandLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(35, 35, 35)
                                 .addGroup(CustDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(unitPriceText)
-                                    .addComponent(qtyOnHandText)))))
+                                    .addComponent(itemUnitPriceText)
+                                    .addComponent(itemQtyOnHandText)))))
                     .addGroup(CustDetailsPanelLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(CustDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -161,7 +170,7 @@ public class ItemView extends javax.swing.JFrame {
                     .addComponent(ItemCodeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CustDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(packSizeText, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(itemPackSizeText, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PackSizeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CustDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -170,11 +179,11 @@ public class ItemView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CustDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UnitPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(unitPriceText, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(itemUnitPriceText, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CustDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(QtyOnHandLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(qtyOnHandText, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(itemQtyOnHandText, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addComponent(DeleteItemButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -279,35 +288,35 @@ public class ItemView extends javax.swing.JFrame {
     }//GEN-LAST:event_SaveItemButtonActionPerformed
 
     private void UpdateItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateItemButtonActionPerformed
-        updateItems();
+        //updateItems();
     }//GEN-LAST:event_UpdateItemButtonActionPerformed
 
     private void DeleteItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteItemButtonActionPerformed
-        deleteItem();
+        //deleteItem();
     }//GEN-LAST:event_DeleteItemButtonActionPerformed
 
     private void itemCodeTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCodeTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_itemCodeTextActionPerformed
 
-    private void packSizeTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packSizeTextActionPerformed
+    private void itemPackSizeTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPackSizeTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_packSizeTextActionPerformed
+    }//GEN-LAST:event_itemPackSizeTextActionPerformed
 
     private void itemDescTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemDescTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_itemDescTextActionPerformed
 
-    private void unitPriceTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unitPriceTextActionPerformed
+    private void itemUnitPriceTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemUnitPriceTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_unitPriceTextActionPerformed
+    }//GEN-LAST:event_itemUnitPriceTextActionPerformed
 
-    private void qtyOnHandTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtyOnHandTextActionPerformed
+    private void itemQtyOnHandTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemQtyOnHandTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_qtyOnHandTextActionPerformed
+    }//GEN-LAST:event_itemQtyOnHandTextActionPerformed
 
     private void ItemTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ItemTableMouseClicked
-        searchItems();
+        //searchItems();
     }//GEN-LAST:event_ItemTableMouseClicked
 
     /**
@@ -361,15 +370,30 @@ public class ItemView extends javax.swing.JFrame {
     private javax.swing.JButton UpdateItemButton;
     private javax.swing.JTextField itemCodeText;
     private javax.swing.JTextField itemDescText;
+    private javax.swing.JTextField itemPackSizeText;
+    private javax.swing.JTextField itemQtyOnHandText;
+    private javax.swing.JTextField itemUnitPriceText;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField packSizeText;
-    private javax.swing.JTextField qtyOnHandText;
     private javax.swing.JPanel tablePanel;
-    private javax.swing.JTextField unitPriceText;
     // End of variables declaration//GEN-END:variables
 
     private void saveItem() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ItemDTO itemDTO = new ItemDTO(itemCodeText.getText(),
+                itemPackSizeText.getText(), 
+                itemDescText.getText(), 
+                Double.parseDouble(itemUnitPriceText.getText()), 
+                Integer.parseInt(itemQtyOnHandText.getText()));
+        
+        String response;
+        try {
+            response = itemController.saveItem(itemDTO);
+            JOptionPane.showMessageDialog(this, response);
+        } catch (Exception ex) {
+            Logger.getLogger(ItemView.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+        
+        
     }
 }
