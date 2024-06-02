@@ -56,8 +56,6 @@ public class ItemDaoImpl implements ItemDao {
         return null;
     }
     
-    
-    
 
     @Override
     public ArrayList<ItemEntity> loadAll() throws Exception {

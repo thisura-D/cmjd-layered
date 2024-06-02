@@ -6,10 +6,8 @@ package edu.ijse.layered.controller;
 
 import edu.ijse.layered.dto.ItemDTO;
 import edu.ijse.layered.service.ServiceFactory;
-import edu.ijse.layered.service.SuperService;
 import edu.ijse.layered.service.custom.ItemService;
 import java.util.ArrayList;
-import javax.print.ServiceUIFactory;
 
 /**
  *

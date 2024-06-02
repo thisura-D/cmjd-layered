@@ -4,6 +4,7 @@
  */
 package edu.ijse.layered;
 
+import edu.ijse.layered.view.CustomerView;
 import edu.ijse.layered.view.ItemView;
 
 /**
@@ -12,6 +13,7 @@ import edu.ijse.layered.view.ItemView;
  */
 public class Main {
     public static void main(String[] args) {
-        new ItemView().setVisible(true);
+        //new ItemView().setVisible(true);
+        new CustomerView().setVisible(true);
     }
 }
