@@ -8,6 +8,7 @@ import edu.ijse.layered.dto.ItemDTO;
 import edu.ijse.layered.service.ServiceFactory;
 import edu.ijse.layered.service.SuperService;
 import edu.ijse.layered.service.custom.ItemService;
+import java.util.ArrayList;
 import javax.print.ServiceUIFactory;
 
 /**
@@ -21,6 +22,28 @@ public class ItemController {
 
     public String saveItem(ItemDTO itemDTO) throws Exception {
         return itemService.saveItem(itemDTO);
+    }
+
+    public String updateItem(ItemDTO itemDTO) throws Exception {
+        return itemService.updateItem(itemDTO);
+    }
+
+    public String deleteItem(String ItemID) throws Exception {
+
+        return itemService.deleteItem(ItemID);
+
+    }
+    
+    public ArrayList<ItemDTO> loadTable() throws Exception{
+        
+        return itemService.loadAllItems();
+        
+    }
+    
+    public ItemDTO searchItem(String ItemID) throws Exception{
+        
+        return itemService.searchItem(ItemID);
+        
     }
 
 }

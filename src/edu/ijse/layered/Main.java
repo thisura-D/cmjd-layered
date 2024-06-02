@@ -4,12 +4,14 @@
  */
 package edu.ijse.layered;
 
+import edu.ijse.layered.view.ItemView;
+
 /**
  *
  * @author Thisura
  */
 public class Main {
     public static void main(String[] args) {
-        
+        new ItemView().setVisible(true);
     }
 }
