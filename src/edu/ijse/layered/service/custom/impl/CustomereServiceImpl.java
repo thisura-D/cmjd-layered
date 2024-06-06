@@ -73,7 +73,7 @@ public class CustomereServiceImpl implements CustomerService {
         CustomerEntity e = customerDao.get(CustID);
         
         return new CustomerDTO (e.getCustID(), 
-                    e.getCustID(), 
+                    e.getCustTitle(), 
                     e.getCustName(), 
                     e.getDOB(), 
                     e.getSalary(), 
